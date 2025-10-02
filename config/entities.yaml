@@ -1,0 +1,60 @@
+# Entity Schema for Banking Chatbot
+
+entities:
+  ACCOUNT_NUMBER:
+    description: "Full or partial account ID"
+    examples:
+      - "1234567890"
+      - "****7890"
+
+  CARD_LAST4:
+    description: "Last 4 digits of card"
+    examples:
+      - "1234"
+
+  DATE_RANGE:
+    description: "Time range for transactions"
+    examples:
+      - "Aug 1-15"
+      - "last week"
+
+  AMOUNT:
+    description: "Currency amount"
+    examples:
+      - "$500"
+      - "€100.50"
+
+  CURRENCY:
+    description: "Currency code"
+    examples:
+      - "USD"
+      - "EUR"
+
+  MERCHANT_NAME:
+    description: "Shop/vendor name"
+    examples:
+      - "Amazon"
+      - "Starbucks"
+
+  PRODUCT_TYPE:
+    description: "Banking product"
+    values:
+      - checking
+      - savings
+      - credit_card
+      - loan
+
+label_list:
+  - O
+  - B-ACCOUNT
+  - I-ACCOUNT
+  - B-CARD_LAST4
+  - I-CARD_LAST4
+  - B-DATE_RANGE
+  - I-DATE_RANGE
+  - B-AMOUNT
+  - I-AMOUNT
+  - B-MERCHANT
+  - I-MERCHANT
+  - B-PRODUCT
+  - I-PRODUCT

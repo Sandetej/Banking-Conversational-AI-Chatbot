@@ -1,0 +1,73 @@
+# 77 Banking Intents Taxonomy
+
+card_management:
+  - activate_my_card
+  - card_about_to_expire
+  - card_acceptance
+  - card_arrival
+  - card_delivery_estimate
+  - card_not_working
+  - compromised_card
+  - lost_or_stolen_card
+
+transfers_payments:
+  - cancel_transfer
+  - transfer_not_received_by_recipient
+  - transfer_timing
+  - transfer_fee_charged
+  - declined_transfer
+  - failed_transfer
+  - pending_transfer
+  - top_up_failed
+
+account_balance:
+  - get_balance
+  - balance_not_updated_after_bank_transfer
+  - pending_top_up
+  - pending_card_payment
+
+exchange_fees:
+  - exchange_charge
+  - exchange_rate
+  - extra_charge_on_statement
+
+verification_security:
+  - verify_my_identity
+  - passcode_forgotten
+  - change_pin
+
+product_support:
+  - apple_pay_or_google_pay
+  - atm_support
+  - contactless_not_working
+  - get_physical_card
+  - supported_cards_and_currencies
+
+account_management:
+  - edit_personal_details
+  - order_physical_card
+  - pin_blocked
+  - terminate_account
+  - request_refund
+
+status_tracking:
+  - transaction_history
+  - status_tracking_general
+  - explain_banking_terms
+
+intent_slot_mapping:
+  get_balance:
+    - account_type
+  transaction_history:
+    - account_type
+    - date_range
+  transfer_money:
+    - source_account
+    - target_account
+    - amount
+
+high_risk_intents:
+  - transfer_money
+  - terminate_account
+  - change_pin
+  - disputed_transaction
